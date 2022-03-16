@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 4</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+		function KiemTra()
+		{
+			var tdn = f.HoTen.value;
+			var mk = f.MatKhau.value;
+			var nlmk = f.MkLai.value;
+			if(tdn =="" || mk=="" || nlmk=="")
+			{
+				alert('Nhập lại thông tin bị trống kìa thằng thảm hại');
+				return false;
+			}
+			if(tdn.length <6)
+			{
+				alert('Nhập hơn 6 kí tự tao xem');
+				return false;
+			}
+			if(mk!=nlmk)
+			{
+				alert('mật khẩu không chung dòng máu');
+				return false;
+			}
+			return true;
+		}
+		</script>
+		<form name ="f">
+			<table>
+			<tr>
+				<td>Họ tên: </td>
+				<td><input type="text" name="HoTen"></td>
+				<td>(Tối thiểu 6 kí tự)</td>
+			</tr>
+			<tr>
+				<td>Mật khẩu: </td>
+				<td><input type="password" name="MatKhau"></td>
+			</tr>
+			<tr>
+				<td>Nhập lại mật khẩu: </td>
+				<td><input type="password" name="MkLai"></td>
+			</tr>
+			</table>
+			<button type ="submit" onclick="return KiemTra()">Kiểm tra</button>
+		</form>
+	</body>
+</html>

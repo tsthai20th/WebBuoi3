@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 5</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<div id ="HienThi"></div>
+		<script>
+		function ThoiGian()
+		{
+		var d = new Date();
+		var gio = d.getHours();
+		var phut = d.getMinutes();
+		var giay = d.getSeconds();
+		document.getElementById('HienThi').innerHTML ='Bây giờ là   '+gio+':'+phut+':'+giay;
+		}
+		setInterval(ThoiGian,1000); 
+		</script>
+	</body>
+</html>

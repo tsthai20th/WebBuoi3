@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 2</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<form>
+			<table>
+			<tr>
+				<td>Họ tên: </td>
+				<td><input type="text" name="HoTen"></td>
+			</tr>
+			<tr>
+				<td>Năm Sinh: </td>
+				<td>
+					<select name ="NamSinh">
+							<script>
+								var d = new Date();
+								var namht = d.getFullYear();
+								for(var i=1950;i<=namht;i++)
+								{
+									document.write('<option>');
+									document.write(i);	
+									document.write('</option>');
+								}
+							</script>
+					</select>
+				</td>
+			</tr>
+			</table>
+		</form>
+	</body>
+</html>
